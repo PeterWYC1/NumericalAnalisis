@@ -32,6 +32,8 @@ def jacobi(M,vecind,X0,nmax,delta,tole):
   U=F[2]
   DI=np.linalg.inv(D)
   T=DI @ (L+U)
+  print('Los valores propios de T son:')
+  print(np.abs(np.linalg.eigvals(T)))
   C=DI @ vecind
 
   i=0
@@ -57,6 +59,8 @@ def gauss_seidel(M, vecind, X0, nmax, delta, tole):
   U = F[2]
   DI = np.linalg.inv(D-L)
   T = DI @ U
+  print('Los valores propios de T son:')
+  print(np.abs(np.linalg.eigvals(T)))
   C = DI @ vecind
 
   i = 0
@@ -81,6 +85,8 @@ def castano(M, vecind, X0, nmax, delta, tole):
   U = F[2]
   DI = np.linalg.inv(D-1/4*L-1/3*U)
   T = DI @ (3/4*L+2/3*U)
+  print('Los valores propios de T son:')
+  print(np.abs(np.linalg.eigvals(T)))
   C = DI @ vecind
 
   i = 0
@@ -103,7 +109,10 @@ def castano(M, vecind, X0, nmax, delta, tole):
 def richardson(M, vecind, X0, nmax, delta, tole):
   filas = len(M)
   T = np.eye(filas) - M
+  print('Los valores propios de T son:')
+  print(np.abs(np.linalg.eigvals(T)))
   C = vecind
+  
   i = 0
   fx = delta + 1
   error = tole +1
@@ -127,6 +136,8 @@ def SOR(M, vecind, X0, nmax, delta, tole,w):
   U = F[2]
   DI = np.linalg.inv(D-w*L)
   T = DI @ ((1-w)*D+w*U)
+  print('Los valores propios de T son:')
+  print(np.abs(np.linalg.eigvals(T)))
   C = w*DI @ vecind
 
   i = 0
