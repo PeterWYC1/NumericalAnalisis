@@ -26,3 +26,5 @@ NoLinealFunctions.reglaFalsa(-1,0)
 #print(Lineal.A)
 #print(Lineal.parmat(Lineal.A))
 Lineal.jacobi(Lineal.A, Lineal.b, Lineal.vectorinicial, 1000, 0, 0)
+Lineal.SOR(Lineal.A, Lineal.b, Lineal.vectorinicial, 1000, 0, 0)
+

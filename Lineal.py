@@ -1,6 +1,7 @@
 import numpy as np
 #Matriz A
-A=np.array([[8,-2,3],[5,-9,1],[7,2,-14]])
+A=np.array([[]])
+#np.array([[8,-2,3],[5,-9,1],[7,2,-14]])
 
 #Vector de resultados
 b=np.array([[-5],[2],[0]])
